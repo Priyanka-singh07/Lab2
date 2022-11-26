@@ -1,0 +1,35 @@
+﻿@model IEnumerable<PostViewModel>
+@{
+    ViewData["Title"] = "Post";
+}
+
+<h1>Post Comments</h1>
+
+<form>
+
+    <table class="table-sm table-striped table-bordered m-2">
+        <thead>
+
+        <th>Id</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Body</th>
+        </thead>
+        <tbody>
+            @foreach(var item in Model)
+            {
+                <tr><td>@item.Id</td>
+                    <td>@item.Title</td>
+                    <td>@item.Author</td>
+                    <td>@item.Body</td>
+                
+                </tr>
+            }
+
+
+        </tbody>
+
+
+    </table>
+
+</form>
